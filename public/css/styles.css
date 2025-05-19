@@ -632,26 +632,42 @@ nav {
   box-shadow: var(--box-shadow);
 }
 
-.form-group {
-  margin-bottom: 20px;
-}
-
-.form-group input,
-.form-group textarea {
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
   width: 100%;
   padding: 12px;
   border: 1px solid var(--light-gray-color);
   border-radius: var(--border-radius);
   font-family: inherit;
   font-size: 1rem;
+  margin-bottom: 20px;
   transition: var(--transition);
+  box-sizing: border-box;
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
+.contact-form input:focus,
+.contact-form textarea:focus {
   outline: none;
   border-color: var(--accent-color);
   box-shadow: 0 0 0 2px rgba(179, 157, 219, 0.2);
+}
+
+.contact-form button[type="submit"] {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.contact-form button[type="submit"]:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-3px);
+  box-shadow: var(--box-shadow);
 }
 
 /* Newsletter */
