@@ -151,6 +151,16 @@ nav {
   padding: 20px 0;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  max-height: 50px;
+  width: auto;
+}
+
 .logo h1 {
   font-size: 1.8rem;
   color: var(--primary-color);
