@@ -470,23 +470,15 @@ nav {
 }
 
 .pricing-grid {
-  display: flex;
-  flex-wrap: nowrap;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   gap: 30px;
-  overflow-x: auto;
-  justify-content: center;
+  margin-bottom: 50px;
 }
 
 .pricing-card {
-  min-width: 260px;
-  flex: 0 0 260px;
-  background-color: var(--light-color);
-  padding: 30px;
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  text-align: center;
-  position: relative;
-  transition: var(--transition);
+  min-width: 0;
+  flex: 1 1 0%;
 }
 
 .pricing-card:hover {
@@ -1010,5 +1002,26 @@ footer {
   .pricing-card {
     min-width: 180px;
     flex: 0 0 180px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .pricing-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
 } 
