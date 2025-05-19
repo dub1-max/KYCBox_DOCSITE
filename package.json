@@ -1,0 +1,12 @@
+{
+  "name": "aml-checker",
+  "version": "1.0.0",
+  "description": "A screening service provider for AML/KYC compliance",
+  "main": "index.html",
+  "scripts": {
+    "dev": "lite-server"
+  },
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
