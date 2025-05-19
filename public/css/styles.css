@@ -471,14 +471,19 @@ nav {
 
 .pricing-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 30px;
   margin-bottom: 50px;
 }
 
 .pricing-card {
-  min-width: 0;
-  flex: 1 1 0%;
+  background-color: var(--light-color);
+  padding: 30px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  position: relative;
+  transition: var(--transition);
 }
 
 .pricing-card:hover {
@@ -870,12 +875,15 @@ footer {
   }
   
   .pricing-grid {
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
   
-  .pricing-card {
-    min-width: 220px;
-    flex: 0 0 220px;
+  .pricing-card.popular {
+    transform: scale(1);
+  }
+  
+  .pricing-card.popular:hover {
+    transform: translateY(-10px);
   }
 }
 
@@ -953,16 +961,6 @@ footer {
   .newsletter-form button {
     border-radius: var(--border-radius);
   }
-  
-  .pricing-grid {
-    gap: 15px;
-    padding-bottom: 10px;
-  }
-  
-  .pricing-card {
-    min-width: 200px;
-    flex: 0 0 200px;
-  }
 }
 
 @media (max-width: 576px) {
@@ -992,36 +990,5 @@ footer {
   
   .footer-links {
     flex-direction: column;
-  }
-  
-  .pricing-grid {
-    gap: 10px;
-    padding-bottom: 10px;
-  }
-  
-  .pricing-card {
-    min-width: 180px;
-    flex: 0 0 180px;
-  }
-}
-
-@media (max-width: 1200px) {
-  .pricing-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-}
-
-@media (max-width: 900px) {
-  .pricing-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-  }
-}
-
-@media (max-width: 600px) {
-  .pricing-grid {
-    grid-template-columns: 1fr;
-    gap: 10px;
   }
 } 
